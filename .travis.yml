@@ -6,4 +6,4 @@ before_install:
   - docker build -t iviberberi/docker-react -f Dockerfile.dev .
 
 script:
-  - docker run iviberberi/docker-react npm run test -- --coverage
+  - docker run -e CI=true iviberberi/docker-react npm run test -- --coverage
